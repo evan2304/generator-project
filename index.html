@@ -7,17 +7,35 @@
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function(){
+            
             $('button').click(function(){
-                var name=$('#nam')
-            });
+                var name = $('#name').val()
+                var interests = $('#interetsts').val()
+                var sign = $('select[name=selector]').val()
+                var color = $('#color').val()
+                var food = $('#food').val()
+                var smell = $('#smell').val()
+                
+                $('button').css('color','white').css('background-color','grey');
+          
+                
+                var nametag = smell + " SMELLS TERRIBLE and " + food + "  is the most AMAZING thing to eat. My name is " + name + " and these are some facts about me. My favourite color is " + color + ".";
+                $("p").html(nametag);
+                
+
         });
+        });
+        
     </script>
+   
   </head>
   <body>
       <h1>ICE-BREAKER NAME TAG GENERATOR</h1>
-  Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="name"><br>
-  Interests:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="interests"><br>
-  Zodiac Sign: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <select name="sign">
+  Name:<br><input id="name"><br>
+  Interests:<br> <input id="interests"><br>
+  <img src="" name="image-swap"></img>
+  Zodiac Sign: <br><select name="sign">
+  <option value="">Please select</option>  
   <option value="aries">Aries</option>
   <option value="taurus">Taurus</option>
   <option value="gemini">Gemini</option>
@@ -25,17 +43,35 @@
   <option value="leo">Leo</option>
   <option value="virgo">Virgo</option>
   <option value="libra">Libra</option>
-  <option value="scorpio">Cancer</option>
+  <option value="scorpio">Scorpio</option>
   <option value="sagittarius">Sagittarius</option>
   <option value="capricorn">Capricorn</option>
   <option value="aquarius">Aquarius</option>
   <option value="pisces">Pisces</option>
   </select><br>
   
-  Favourite Color: &nbsp;&nbsp;<input id="color"><br>
-  Food you dislike: &nbsp;<input id="name"><br>
-  Smell you like: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="smell"><br>
-  <br
-  <button>Create Name Tag!</button>
+  
+  
+  
+  Favourite Color:<br><input id="color"><br>
+  Food you dislike: <br><input id="food"><br>
+  Smell you like:<br><input id="smell"><br>
+  
+  <div id="aries" class= ""><img src="image/aries.png"/></div>
+  <div id="taurus"><img src="image/taurus.png"/></div>
+  <div id="gemini"><img src="image/gemini.png"/></div>
+  <div id="cancer"><img src="image/cancer.png"/></div>
+  <div id="leo"><img src="image/leo.png"/></div>
+  <div id="virgo"><img src="image/virgo.png"/></div>
+  <div id="libra"><img src="image/libra.png"/></div>
+  <div id="scorpio"><img src="image/scorpio.png"/></div>
+  <div id="sagitarius"><img src="image/sagittarius.png"/></div>
+  <div id="capricorn"><img src="image/capricorn.png"/></div>
+  <div id="aquarius"><img src="image/aquarius.png"/></div>
+  <div id="pisces"><img src="image/pisces.png"/></div>
+  
+  <br>
+  <button>Create name tag!</button>
+  <p></p>
   </body>
 </html>
