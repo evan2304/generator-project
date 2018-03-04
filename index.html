@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>jQuery Template</title>
+    <style type="text/css">
+    
+    </style>
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
@@ -17,12 +20,13 @@
                 var smell = $('#smell').val()
                 
                 $('button').css('color','white').css('background-color','grey');
+                
           
                 
-                var nametag = smell + " SMELLS TERRIBLE and " + food + "  is the most AMAZING thing to eat. My name is " + name + " and these are some facts about me. My favourite color is " + color + ".";
+                var nametag = smell + " SMELLS TERRIBLE and " + food + "  is the most AMAZING thing to eat. My name is " + name + " and these are some facts about me. My favoourite color is the color of this nametag.";
                 $("p").html(nametag);
                 
-
+               
         });
         });
         
@@ -33,7 +37,7 @@
       <h1>ICE-BREAKER NAME TAG GENERATOR</h1>
   Name:<br><input id="name"><br>
   Interests:<br> <input id="interests"><br>
-  <img src="" name="image-swap"></img>
+  
   Zodiac Sign: <br><select name="sign">
   <option value="">Please select</option>  
   <option value="aries">Aries</option>
@@ -51,12 +55,28 @@
   </select><br>
   
   
+  Pick a color:<br>
+  <div class="select">
+    <select id="colorselect">
+      <option value="">Please select</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+      <option value="yellow">Yellow</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="indigo">Indigo</option>
+      <option value="violet">Violet</option>
+      <option value="violet">Violet</option>
+      <option value="gray">Gray</option>
+    </select>
+  </div>
+ 
   
-  
-  Favourite Color:<br><input id="color"><br>
   Food you dislike: <br><input id="food"><br>
   Smell you like:<br><input id="smell"><br>
+
   
+  <div class="output">
   <div id="aries" class= ""><img src="image/aries.png"/></div>
   <div id="taurus"><img src="image/taurus.png"/></div>
   <div id="gemini"><img src="image/gemini.png"/></div>
