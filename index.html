@@ -6,12 +6,18 @@
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <style type="text/css">
+ 
     .result{
-      width:600px;
-      height:300px;
+      width:750px;
+      height:460px;
       padding-top:10px;
       text-align:center;
       font-size:20px;
+      font-family:verdana;
+    }
+    
+    span {
+      font-size:30px;
     }
     
     button{
@@ -19,6 +25,12 @@
       font-size:30px;
       border-radius:25px;
       margin-left:100px;
+      font-family:verdana;
+    }
+    
+    #extra {
+      font-size:20px;
+      font-family:verdana;
     }
   </style>
     <script>
@@ -28,19 +40,22 @@
             $('button').click(function(){
                 $('.sign').hide()
                 var name = $('#name').val()
-                var interests = $('#interetsts').val()
+                var interests = $('#interests').val()
                 var color = $('#color').val()
                 var food = $('#food').val()
                 var smell = $('#smell').val()
-                var bgcolor =('#bgcolor').val()
+                var app = $('#app').val()
+                var person = $('#person').val()
+                
                 $('button').css('color','white').css('background-color','grey');
           
                 
                 $("#result").css('background-color', bgcolor)
-                var nametag = smell + " SMELLS TERRIBLE"+'<br>' + food + "  is the most AMAZING thing to eat."+'<br>' + "Nice to meet you! My name is " + name + " and these are some facts about me:"+'<br>'+"My favourite color is " + color + ".";
+                var nametag = '<span>' + smell +'</span>'+ " SMELLS AMAZING"+'<br>' + '<span>'+ food+ '</span>' + "  is the most TERRIBLE thing to eat."+'<br>' + "Nice to meet you! My name is " + '<span>'+ name + '</span>' +" and these are some facts about me:"+'<br>'+"My favourite color is " + '<span>'+ color +'</span>'+ '<br>' +"The sole reason I have a phone is " + '<span>' + app + '</span>' + '<br>'+" If I could be anyone for a day I would be "+ '<span>'+ person + '</span>'+ "!!!" + '<br>'+ "Also... I really like " + '<span>' + interests + '</span>'; 
                 $("p").html(nametag);
                 
               var sign = document.getElementById("sign").selectedIndex;
+              var backgroundColor = document.getElementById("bgcolor").selectedIndex;
               
               console.log(sign)
               
@@ -80,6 +95,27 @@
               else if (sign==12){
                 $('#pisces').show()
               }
+              
+              console.log(backgroundColor)
+              
+              if (backgroundColor==1){
+                $(".result").css('background-color','red')
+              }
+              else if (backgroundColor==2){
+                $(".result").css('background-color','yellow')
+              }
+              else if (backgroundColor==3){
+                $(".result").css('background-color','orange')
+              }
+              else if (backgroundColor==4){
+                $(".result").css('background-color','purple')
+              }
+               else if (backgroundColor==5){
+                $(".result").css('background-color','grey')
+              }
+              else if (backgroundColor==6){
+                $(".result").css('background-color','blue')
+              }
             });
           });
         
@@ -112,6 +148,8 @@
   Favourite Color:<br><input id="color"><br>
   Food you dislike: <br><input id="food"><br>
   Smell you like:<br><input id="smell"><br>
+  Favourite App:<br><input id="app"><br>
+  A person you would like to be for the day:<br><input id="person"><br>
   Pick Color of Name Tag: <br><select id="bgcolor">
   <option value="">Please select</option>  
   <option value="red">Red</option>
@@ -123,7 +161,7 @@
   </select>
   <br>
   <br>
-  <button>Create name tag!</button>
+  <button>CREATE NAME TAG!</button>
   <br>
   <br>
   <br>
@@ -146,5 +184,8 @@
   <div id="pisces" class="sign"><img src="image/pisces.png"/></div>
   </div>
   
+  <div id="extra">
+    Feel free to screenshot and print out this personalized name-tag!
+  </div>
   </body>
 </html>
