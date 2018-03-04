@@ -9,10 +9,16 @@
     .result{
       width:600px;
       height:300px;
-      background-color:blue;
       padding-top:10px;
       text-align:center;
       font-size:20px;
+    }
+    
+    button{
+      width:200px;
+      font-size:30px;
+      border-radius:25px;
+      margin-left:100px;
     }
   </style>
     <script>
@@ -26,11 +32,12 @@
                 var color = $('#color').val()
                 var food = $('#food').val()
                 var smell = $('#smell').val()
-                
+                var bgcolor =('#bgcolor').val()
                 $('button').css('color','white').css('background-color','grey');
           
                 
-                var nametag = smell + " SMELLS TERRIBLE and " + food + "  is the most AMAZING thing to eat. My name is " + name + " and these are some facts about me. My favourite color is " + color + ".";
+                $("#result").css('background-color', bgcolor)
+                var nametag = smell + " SMELLS TERRIBLE"+'<br>' + food + "  is the most AMAZING thing to eat."+'<br>' + "Nice to meet you! My name is " + name + " and these are some facts about me:"+'<br>'+"My favourite color is " + color + ".";
                 $("p").html(nametag);
                 
               var sign = document.getElementById("sign").selectedIndex;
@@ -83,7 +90,7 @@
       <h1>ICE-BREAKER NAME TAG GENERATOR</h1>
   Name:<br><input id="name"><br>
   Interests:<br> <input id="interests"><br>
-  <img src="" name="image-swap"></img>
+  
   Zodiac Sign: <br><select id="sign">
   <option value="">Please select</option>  
   <option value="aries">Aries</option>
@@ -102,12 +109,24 @@
   
   
   
-  
   Favourite Color:<br><input id="color"><br>
   Food you dislike: <br><input id="food"><br>
   Smell you like:<br><input id="smell"><br>
+  Pick Color of Name Tag: <br><select id="bgcolor">
+  <option value="">Please select</option>  
+  <option value="red">Red</option>
+  <option value="yellow">Yellow</option>
+  <option value="orange">Orange</option>
+  <option value="purple">Purple</option>
+  <option value="gray">Gray</option>
+  <option value="blue">Blue</option>
+  </select>
+  <br>
   <br>
   <button>Create name tag!</button>
+  <br>
+  <br>
+  <br>
   
   
   
@@ -126,5 +145,6 @@
   <div id="aquarius" class="sign"><img src="image/aquarius.png"/></div>
   <div id="pisces" class="sign"><img src="image/pisces.png"/></div>
   </div>
+  
   </body>
 </html>
